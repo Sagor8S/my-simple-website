@@ -8,14 +8,14 @@
     text-decoration: none;
     list-style: none;
     scroll-behavior: smooth;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins';
 }
 
 :root{
-    --bg-color:rgb(21, 24, 24);
-    --second-bg-color:rgb(110, 93, 127);
-    --hover-color:rgb(101, 45, 67);
-    --text-color:rgb(71, 163, 184);
+    --bg-color:rgb(181, 180, 195);
+    --second-bg-color:rgb(163, 163, 157);
+    --hover-color:rgb(234, 222, 227);
+    --text-color:rgb(38, 39, 45);
 }
 
 body{
@@ -65,8 +65,8 @@ nav ul a:hover{
     opacity: 1;
 }
 
-.sagor{
-    color: var(--hover-color);
+.span{
+    color: var(--second-bg-color);
 }
 
 .btn{
@@ -87,7 +87,7 @@ nav ul a:hover{
 }
 
 #menu{
-    color: var(--text-color);
+    color: white;
     font-size: 2em;
     display: none;
 }
@@ -108,9 +108,9 @@ section{
 }
 
 #home img{
-    width: 18vw;
+    width: 20vw;
     border-radius: 50%;
-    margin-top: 3em;
+    margin-top: 4em;
 }
 
 .info-box{
@@ -155,5 +155,322 @@ section{
 }
 
 ::-webkit-scrollbar-thumb{
-    background: linear-gradient(to bottom, #6cff52, #3ec5ff);
+    background: linear-gradient(to bottom, var(--bg-color), var(--second-bg-color));
+}
+
+/* about section code start here */
+
+/* about code */
+#about{
+    background: var(--second-bg-color);
+    display: flex;
+    align-items: centerf;
+    justify-content: center;
+    gap: 5em;
+}
+
+#about img{
+    width: 30vw;
+    border-radius: 1em;
+}
+
+.about-box{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 2em;
+}
+
+.about-box h1{
+    font-size: 5em;
+}
+
+.about-box p{
+    color: var(--text-color);
+    opacity: 0.8;
+}
+
+/* skills code */
+.skills{
+    display: flex;
+    text-align: left;
+    gap: 10em;
+}
+
+.skills ul{
+    font-size: 1.3em;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    color: var(--text-color);
+    opacity: 0.8;
+    align-items: baseline;
+}
+
+.skills ul li span{
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    font-size: 1.3em;
+    transition: 0.3s ease-in-out;
+}
+
+.skills ul li span:hover{
+    transform: translateX(10px);
+}
+
+.skills ul li i{
+    font-size: 1.2em;
+}
+
+.about-box h2{
+    font-size: 2.5em;
+}
+
+/* services section code start here */
+
+#services{
+    background: var(--bg-color);
+}
+
+.header{
+    text-align: center;
+    font-size: 5em;
+    margin: 0.5em 0;
+}
+
+.services-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px, 1fr));
+    gap: 2em;
+}
+
+.box{
+    border: 2px solid rgb(49, 49, 49);
+    border-radius: 0.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    padding: 2em;
+    gap: 1em;
+    color: var(--text-color);
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.box:hover{
+    border: 2px solid var(--hover-color);
+}
+
+.box p{
+    opacity: 0.8;
+}
+
+.box h1{
+    font-size: 2em;
+}
+
+.box img{
+    min-width: 25px;
+    border-radius: 0.5em;
+}
+
+
+/* contact section code start here */
+
+#contact{
+    background: var(--second-bg-color);
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+}
+
+form .input-box{
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    gap: 1em;
+}
+
+.input-box span{
+    font-size: 1.5em;
+}
+
+form input{
+    font-size: 1.3em;
+    padding: 1em 5em;
+    border-radius: 0.5em;
+    border: none;
+    outline: none;
+}
+
+form input:focus{
+    background: rgb(229, 229, 229);
+}
+
+/* footer section code start here */
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10em;
+    bottom: 0;
+    background: var(--bg-color);
+    width: 100%;
+    padding: 5em 15%;
+}
+
+/* .col-left */
+.col-left{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.col-box{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.col-box i{
+    font-size: 2em;
+}
+
+.col-box span{
+    font-size: 1.2em;
+}
+
+/* col-right */
+.col-right{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    color: var(--text-color);
+    max-width: 500px;
+}
+
+.col-right span{
+    font-size: 1.3em;
+}
+
+.col-right .social-icons{
+    display: flex;
+    align-items: baseline;
+    justify-content: left;
+    gap: 1em;
+}
+
+.col-right .social-icons i{
+    font-size: 2em;
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.social-icons i:hover{
+    color: white;
+}
+
+
+@media(max-width:968px){
+    section{
+        padding: 8em 15%;
+    }
+    nav .btn{
+        display: none;
+    }
+    #menu{
+        display: block;
+    }
+    .links{
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 100%;
+        padding: 1em 3em;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        background: black;
+        display: none;
+    }
+    .links a{
+        margin: 2em 0;
+        display: block;
+        font-size: 1.5em;
+        color: white;
+    }
+    .links.active{
+        display: block;
+    }
+
+    #home h1{
+        font-size: 4em;
+    }
+    #home h3{
+        font-size: 2em;
+    }
+    #home img{
+        width: 24vw;
+    }
+
+    #about{
+        flex-direction: column;
+    }
+    #about img{
+        width: 32vw;
+    }
+    #about h1{
+        font-size: 3em;
+    }
+    #about ul{
+        font-size: 1em;
+    }
+
+}
+
+@media(max-width:768px){
+    #home h1{
+        font-size: 2.5em;
+    }
+    #home h3{
+        font-size: 1.5em;
+    }
+    #home img{
+        width: 32vw;
+    }
+
+    #about .skills{
+        gap: 3em;
+    }
+
+    #services .header{
+        font-size: 3em;
+    }
+
+    #contact .header{
+        font-size: 3em;
+    
+    }
+    #contact .input-box span{
+        font-size: 1.2em;
+    }
+    .input-box input{
+        padding: 0.5em 1em;
+    }
+
+    footer{
+        flex-direction: column;
+        gap: 5em;
+        align-items: baseline;
+    }
+
 }
