@@ -1,2 +1,159 @@
 /* css Importing Google fonts */
 @import url('https://fonts.googleapis.com/css2?family=Miniver&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root{
+    --bg-color:rgb(21, 24, 24);
+    --second-bg-color:rgb(110, 93, 127);
+    --hover-color:rgb(101, 45, 67);
+    --text-color:rgb(71, 163, 184);
+}
+
+body{
+    min-height: 100vh;
+    background: var(--bg-color);
+}
+
+/* nav section code start here */
+nav{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 2rem 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--second-bg-color);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+
+ul{
+    display: flex;
+    align-items: center;
+    gap: 3em;
+}
+
+nav ul a{
+    color: var(--text-color);
+    opacity: 0.7;
+    transition: 0.2s ease-in-out;
+}
+
+nav ul a:hover{
+    opacity: 1;
+}
+
+.logo{
+    font-size: 2em;
+    color: var(--text-color);
+    font-weight: 700;
+    opacity: 0.8;
+    transition: 0.2s ease-in-out;
+}
+
+.logo:hover{
+    opacity: 1;
+}
+
+.sagor{
+    color: var(--hover-color);
+}
+
+.btn{
+    padding: 0.5em 1em;
+    color: var(--text-color);
+    font-weight: 500;
+    letter-spacing: 1px;
+    border-radius: 0.5em;
+    font-size: 1.1em;
+    border: 2px solid var(--text-color);
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.btn:hover{
+    background: var(--hover-color);
+    color: var(--bg-color);
+}
+
+#menu{
+    color: var(--text-color);
+    font-size: 2em;
+    display: none;
+}
+
+/* home section code start here */
+section{
+    min-height: 100vh;
+    padding:  5% 15%;
+}
+
+#home{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+    color: var(--text-color);
+}
+
+#home img{
+    width: 18vw;
+    border-radius: 50%;
+    margin-top: 3em;
+}
+
+.info-box{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5em;
+    max-width: 600px;
+}
+
+.info-box h1{
+    font-size: 5em;
+    font-weight: 600;
+}
+
+.info-box h1{
+    font-size: 1.5em;
+    font-weight: 400;
+}
+.info-box p{
+    opacity: 0.7;
+}
+
+.btn-box{
+    display: flex;
+    gap: 1em;
+}
+
+.btn-box .btn:nth-of-type(2){
+    background: var(--bg-color);
+    color: var(--second-bg-color);
+}
+
+.btn-box .btn:nth-of-type(2):hover{
+    background: var(--bg-color);
+    color: var(--hover-color);
+}
+
+::-webkit-scrollbar{
+    width: 20px;
+    background: var(--bg-color);
+}
+
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(to bottom, #6cff52, #3ec5ff);
+}
